@@ -25,8 +25,8 @@ const Navbar = () => {
             <div className="flex justify-between w-11/12 mx-auto items-center h-full">
                 {/* logo */}
                 <div>
-                    <Link to="/" className="md:text-3xl text-2xl font-bold cursor-pointer">
-                        FUNTOPIA
+                    <Link to="/" className="md:text-3xl text-2xl font-semibold text-gray-800 cursor-pointer">
+                        LINGUA
                     </Link>
                 </div>
                 {/* search bar */}
@@ -53,27 +53,27 @@ const Navbar = () => {
                             className={`list-none lg:flex items-center lg:static duration-500 lg-p-0 p-5 text-center -z-10 lg:space-y-0 space-y-3  absolute lg:bg-none bg-cyan-600 ${open ? "right-10 top-24" : "right-10  -top-72 "
                                 }`}
                         >
-                            <li className="px-6 cursor-pointer font-bold text-xl  text-white">
+                            <li className="px-6 cursor-pointer font-semibold text-lg  text-white">
                                 <ActiveLink to="/">
                                     Home
                                 </ActiveLink>
                             </li>
-                            <li className="px-6 cursor-pointer font-bold text-xl text-white">
+                            <li className="px-6 cursor-pointer font-semibold text-lg text-white">
                                 <ActiveLink className="" to="/allToys">
-                                    All Toys
+                                    Instructor
+                                </ActiveLink>
+                            </li>
+                            <li className="px-6 cursor-pointer font-semibold text-lg text-white">
+                                <ActiveLink className="" to="/allToys">
+                                    Classes
                                 </ActiveLink>
                             </li>
                             {user?.email || user?.providerData ? (
                                 <>
 
-                                    <li className="px-6 cursor-pointer font-bold text-xl text-white">
+                                    <li className="px-6 cursor-pointer font-semibold text-lg text-white">
                                         <ActiveLink className="" to="/myToys">
-                                            My Toys
-                                        </ActiveLink>
-                                    </li>
-                                    <li className="px-6 cursor-pointer font-bold text-xl text-white">
-                                        <ActiveLink className="" to="/addToy">
-                                            Add a Toy
+                                            dashboard
                                         </ActiveLink>
                                     </li>
                                 </>
@@ -82,20 +82,15 @@ const Navbar = () => {
 
                                 </>
                             )}
-                            <li className="px-6 cursor-pointer font-bold text-xl text-white">
-                                <ActiveLink className="" to="/blog">
-                                    Blog
-                                </ActiveLink>
-                            </li>
 
                             {user?.email || user?.providerData ? (
                                 <li>
-                                    <button onClick={handleLogOut} className="font-bold text-xl hover:text-gray-800 transition-all duration-150 text-white">
+                                    <button onClick={handleLogOut} className="font-semibold text-lg hover:text-gray-800 transition-all duration-150 text-white">
                                         Logout
                                     </button>
                                 </li>
                             ) : (
-                                <li className="px-6 cursor-pointer font-bold text-xl text-white">
+                                <li className="px-6 cursor-pointer font-semibold text-lg text-white">
                                     <ActiveLink to="/login">
                                         Login
                                     </ActiveLink>
@@ -123,7 +118,7 @@ const Navbar = () => {
                     {/* hamburger menu */}
                     <div
                         onClick={() => setOpen(!open)}
-                        className="w-12 h-12 lg:hidden bg-white rounded-full text-pink-500 flex justify-center items-center font-bold text-2xl cursor-pointer"
+                        className="w-12 h-12 lg:hidden bg-white rounded-full text-pink-500 flex justify-center items-center font-semibold text-2lg cursor-pointer"
                     >
                         {/* <span>{open === true ? <RxCross2 /> : <RxHamburgerMenu />}</span> */}
                     </div>
