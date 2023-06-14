@@ -3,6 +3,7 @@ import useTitle from "../../Hooks/useTitle";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { getAuth, updateProfile } from "firebase/auth";
+import loginImg from '../../assets/login/login.jpg'
 
 
 const auth = getAuth();
@@ -50,14 +51,20 @@ const Register = () => {
     return (
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 mt-10 w-11/12 mx-auto mb-36 ">
 
-            <div className="bg-cyan-500 h-96 flex justify-center items-center capitalize rounded-xl shadow-xl hover:shadow-none duration-200">
-                <div className="text-center">
-                    <h3 className="md:text-4xl text-3xl font-bold text-white">excited to see you there</h3>
-                    <div className="flex mt-5 justify-center">
-                        <Link to='/login' className="py-3 px-4 bg-white font-semibold text-xl capitalize  rounded-lg ">go back</Link>
-                        <p className="py-3 px-4 bg-white font-semibold text-xl capitalize  rounded-lg text-cyan-500 ml-5">register</p>
+<div className="flex justify-center">
+                <div className="relative h-96 shadow-xl hover:shadow-none duration-200 rounded-xl">
+                    <img className="h-96 rounded-xl" src={loginImg} alt="" />
+                    <div className="flex justify-center rounded-xl items-center absolute bg-gradient-to-r from-[#06b6d4] to-[rgba(0, 0, 0, 0.82)] top-0 w-full h-full capitalize">
+                        <div>
+                            <h3 className="md:text-4xl text-3xl font-bold text-white">excited to see you there</h3>
+                            <div className="flex mt-5 justify-center">
+                                <Link to='/login' className="py-3 px-4 bg-white text-gray-700 font-semibold text-xl capitalize rounded-lg ">go back</Link>
+                                <p className="py-3 px-4 bg-white font-semibold text-xl capitalize rounded-lg text-cyan-500 ml-5">register</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <form onSubmit={handleRegistration}>
                 <div className="bg-cyan-500 p-8 h-fit rounded-xl shadow-xl hover:shadow-none duration-300">
