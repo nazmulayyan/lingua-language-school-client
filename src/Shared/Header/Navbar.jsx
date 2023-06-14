@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ActiveLink from "../../LayOut/ActiveLink/ActiveLink";
+import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
@@ -21,7 +22,7 @@ const Navbar = () => {
         setShowTooltip(!showTooltip);
     };
     return (
-        <nav className="bg-cyan-600 h-20 relative z-10">
+        <nav className="bg-cyan-500 h-20 relative z-10">
             <div className="flex justify-between w-11/12 mx-auto items-center h-full">
                 {/* logo */}
                 <div>
@@ -50,7 +51,7 @@ const Navbar = () => {
                 <div className="flex gap-2 items-center">
                     <div className="justify-end">
                         <ul
-                            className={`list-none lg:flex items-center lg:static duration-500 lg-p-0 p-5 text-center -z-10 lg:space-y-0 space-y-3  absolute lg:bg-none bg-cyan-600 ${open ? "right-10 top-24" : "right-10  -top-72 "
+                            className={`list-none lg:flex items-center lg:static duration-500 lg-p-0 p-5 text-center -z-10 lg:space-y-0 space-y-3  absolute lg:bg-none bg-cyan-500 ${open ? "right-10 top-24" : "right-10  -top-72 "
                                 }`}
                         >
                             <li className="px-6 cursor-pointer font-semibold text-lg  text-white">
@@ -59,12 +60,12 @@ const Navbar = () => {
                                 </ActiveLink>
                             </li>
                             <li className="px-6 cursor-pointer font-semibold text-lg text-white">
-                                <ActiveLink className="" to="/allToys">
+                                <ActiveLink className="" to="/instructor">
                                     Instructor
                                 </ActiveLink>
                             </li>
                             <li className="px-6 cursor-pointer font-semibold text-lg text-white">
-                                <ActiveLink className="" to="/allToys">
+                                <ActiveLink className="" to="/classes">
                                     Classes
                                 </ActiveLink>
                             </li>
@@ -72,7 +73,7 @@ const Navbar = () => {
                                 <>
 
                                     <li className="px-6 cursor-pointer font-semibold text-lg text-white">
-                                        <ActiveLink className="" to="/myToys">
+                                        <ActiveLink className="" to="/dashboard">
                                             dashboard
                                         </ActiveLink>
                                     </li>
@@ -118,9 +119,9 @@ const Navbar = () => {
                     {/* hamburger menu */}
                     <div
                         onClick={() => setOpen(!open)}
-                        className="w-12 h-12 lg:hidden bg-white rounded-full text-pink-500 flex justify-center items-center font-semibold text-2lg cursor-pointer"
+                        className="w-12 h-12 lg:hidden bg-white rounded-full text-cyan-500 flex justify-center items-center font-semibold text-2lg cursor-pointer"
                     >
-                        {/* <span>{open === true ? <RxCross2 /> : <RxHamburgerMenu />}</span> */}
+                        <span>{open === true ? <RxCross2 /> : <RxHamburgerMenu />}</span>
                     </div>
                 </div>
             </div>
