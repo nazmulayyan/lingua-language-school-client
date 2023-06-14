@@ -2,27 +2,27 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer p-10 bg-cyan-600 text-base-content">
+        <div className="bg-cyan-600 ">
+            <footer className="grid lg:grid-cols-3 grid-clos-1 gap-6 md:grid-cols-2 py-10 w-11/12 mx-auto">
                 <div>
                     <span className="uppercase text-lg font-semibold text-gray-800">Services</span>
-                    <a className="link text-white link-hover">Branding</a>
-                    <a className="link text-white link-hover">Design</a>
-                    <a className="link text-white link-hover">Marketing</a>
-                    <a className="link text-white link-hover">Advertisement</a>
+                    <a className="link text-white block link-hover">Branding</a>
+                    <a className="link text-white block link-hover">Design</a>
+                    <a className="link text-white block link-hover">Marketing</a>
+                    <a className="link text-white block link-hover">Advertisement</a>
                 </div>
                 <div>
                     <span className="uppercase text-lg font-semibold text-gray-800">Company</span>
-                    <a className="link text-white link-hover">About us</a>
-                    <a className="link text-white link-hover">Contact</a>
-                    <a className="link text-white link-hover">Jobs</a>
-                    <a className="link text-white link-hover">Press kit</a>
+                    <a className="link text-white block link-hover">About us</a>
+                    <a className="link text-white block link-hover">Contact</a>
+                    <a className="link text-white block link-hover">Jobs</a>
+                    <a className="link text-white block link-hover">Press kit</a>
                 </div>
                 <div>
                     <span className="uppercase text-lg font-semibold text-gray-800">Legal</span>
-                    <a className="link text-white link-hover">Terms of use</a>
-                    <a className="link text-white link-hover">Privacy policy</a>
-                    <a className="link text-white link-hover">Cookie policy</a>
+                    <a className="link text-white block link-hover">Terms of use</a>
+                    <a className="link text-white block link-hover">Privacy policy</a>
+                    <a className="link text-white block link-hover">Cookie policy</a>
                 </div>
             </footer>
             <footer className="footer px-10 py-4 border-t bg-gray-200 text-base-content border-base-300">
