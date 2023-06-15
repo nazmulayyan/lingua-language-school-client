@@ -3,13 +3,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-    font-family: Montserrat;
-    overflow-x: hidden;
-  }
-  
-  .active{
-    color: #1F2937;
-    font-weight: 700;
-    font-size: 18px;
-  }
+
+body {
+  font-family: Montserrat;
+  overflow-x: hidden;
+}
+
+.active {
+  color: #1F2937;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.glassEffect{
+/* From https://css.glass */
+background: rgba(3, 172, 250, 0.4);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+}
+
