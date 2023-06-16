@@ -41,9 +41,9 @@ const Login = () => {
             <div className="flex justify-center">
                 <div className="relative h-96 shadow-xl hover:shadow-none duration-200 rounded-xl">
                     <img className="h-96 rounded-xl" src={loginImg} alt="" />
-                    <div className="flex justify-center rounded-xl items-center absolute bg-gradient-to-r from-[#06b6d4] to-[rgba(0, 0, 0, 0.82)] top-0 w-full h-full capitalize">
+                    <div className="flex justify-center rounded-xl items-center absolute glassEffect2 top-0 w-full h-full capitalize">
                         <div>
-                            <h3 className="md:text-4xl text-3xl font-bold text-white">excited to see you there</h3>
+                            <h3 className="md:text-4xl text-3xl font-bold text-gray-800">excited to see you there</h3>
                             <div className="flex mt-5 justify-center">
                                 <Link to='/' className="py-3 px-4 bg-white text-gray-700 font-semibold text-xl capitalize rounded-lg ">go back</Link>
                                 <p className="py-3 px-4 bg-white font-semibold text-xl capitalize rounded-lg text-cyan-500 ml-5">login</p>

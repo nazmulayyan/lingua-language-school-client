@@ -22,4 +22,18 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(0px);
 -webkit-backdrop-filter: blur(0px);
 }
+.glassEffect2{
+/* From https://css.glass */
+background: rgba(3, 172, 250, 0.64);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.2px);
+-webkit-backdrop-filter: blur(3.2px);
+}
+.glassEffect3{
+/* From https://css.glass */
+background: rgba(0, 0, 0, 0.4);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0.8px);
+-webkit-backdrop-filter: blur(0.8px);
+}
 
