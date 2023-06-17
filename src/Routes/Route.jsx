@@ -6,6 +6,9 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
 import Classes from "../Pages/Classes/Classes";
 import Instructor from "../Pages/Instructor/Instructor";
+import DashBoard from "../LayOut/DashBoard/DashBoard";
+import Student from "../Pages/Dashboard/Student/Student";
+import InstructorDashBoard from "../Pages/Dashboard/Instructor/InstructorDashBoard";
 
 
 
@@ -34,6 +37,22 @@ const router = createBrowserRouter([
                 path: '/instructor',
                 element: <Instructor></Instructor>
             },
+            
+        ]
+    },
+    {
+        path:'dashboard',
+        element: <DashBoard></DashBoard>,
+        children: [
+            {
+                path: 'student',
+                element:<Student></Student>
+            },
+            {
+                path: 'instructor',
+                element: <InstructorDashBoard></InstructorDashBoard>
+            },
+
         ]
     },
     {

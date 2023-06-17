@@ -1,18 +1,21 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useTitle from '../../Hooks/useTitle'
 import { FcGoogle } from "react-icons/fc";
 import loginImg from '../../assets/login/login.jpg'
+import Swal from "sweetalert2";
 
 const Login = () => {
     useTitle('Login')
 
     const { loginUser, handleGoogleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+
 
     const [error, setError] = useState('');
-    const from = location.state?.from || '/';
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -23,8 +26,18 @@ const Login = () => {
         console.log(email, password);
         loginUser(email, password)
             .then(result => {
-                console.log(result.user);
+                const user = result.user;
+                console.log(user);
                 setError('');
+                Swal.fire({
+                    title: 'user login successfully',
+                    showClass: {
+                      popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                      popup: 'animate__animated animate__fadeOutUp'
+                    }
+                  })
                 navigate(from, { replace: true }); // Redirect to private route
                 form.reset();
             })

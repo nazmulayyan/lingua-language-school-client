@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ActiveLink from "../../LayOut/ActiveLink/ActiveLink";
-import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
+import { RxHamburgerMenu, RxCross2, } from "react-icons/rx";
+import { RiShoppingCartLine } from "react-icons/ri";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
@@ -30,24 +31,7 @@ const Navbar = () => {
                         LINGUA
                     </Link>
                 </div>
-                {/* search bar */}
-                {/* <div className="md:hidden lg:block block">
-                    <form>
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            className="p-3 text-gray-700 rounded-full lg:rounded-none cursor-pointer"
-                            name="search"
-                        />
-                        <button
-                            type="submit"
-                            className="md:px-6 px-4 font-semibold text-gray-700 py-3 lg:rounded-none rounded-full md:ms-2 ms-1 bg-white cursor-pointer"
-                        >
-                            Search
-                        </button>
-                    </form>
-                </div> */}
-                {/* menu item */}
+
                 <div className="flex gap-2 items-center">
                     <div className="justify-end">
                         <ul
@@ -76,6 +60,9 @@ const Navbar = () => {
                                         <ActiveLink className="" to="/dashboard">
                                             dashboard
                                         </ActiveLink>
+                                        <div className="fixed top-1/2 left-0 rounded-r-sm bg-cyan-500 px-3 py-2 text-3xl font-bold text-black">
+                                            <RiShoppingCartLine />
+                                        </div>
                                     </li>
                                 </>
                             ) : (
@@ -125,6 +112,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+
         </nav>
     );
 };
