@@ -1,18 +1,11 @@
-import { useEffect, useState } from "react";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle.jsx";
 import ClassItem from "../ClassItem/ClassItem.jsx";
+import useClass from "../../../Hooks/useClass.jsx";
 
 const PopularClasses = () => {
-    const [classList, setClassList] = useState([]);
 
-    useEffect(() => {
-        fetch('/data.json')
-            .then(res => res.json())
-            .then(data => {
-                const popularClasses = data.filter(item => item.category === 'class');
-                setClassList(popularClasses);
-            });
-    }, []);
+    const [classList] = useClass()
+    const popularClasses = classList.filter(item => item.category === 'class')
 
     return (
         <div className="w-11/12 mx-auto mb-28">
@@ -21,7 +14,7 @@ const PopularClasses = () => {
                 <SectionTitle subHeading={'Discover the best classes available'} />
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-20">
-                {classList.map(item => (
+                {popularClasses.map(item => (
                     <ClassItem key={item._id} item={item} />
                 ))}
             </div>
