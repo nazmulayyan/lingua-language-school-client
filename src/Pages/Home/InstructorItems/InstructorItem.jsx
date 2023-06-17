@@ -17,8 +17,6 @@ const InstructorItem = ({item}) => {
                             <span className='w-1/4 font-semibold text-base text-gray-600 pb-3'>Email:</span>
                             <span className='w-fit font-semibold text-base text-gray-800 pb-3'>{email}</span>
                         </div>
-
-                        
                         
                     </div>
                 </div>

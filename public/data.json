@@ -1,99 +1,171 @@
 [
-    {
-      "_id": 1,
-      "image": "https://i.ibb.co/gZd6spt/pexels-andrea-piacquadio-3756681.jpg",
-      "name": "John Doe",
-      "email": "johndoe@example.com",
-      "category": "instructor"
-    },
-    {
-      "_id": 2,
-      "image": "https://i.ibb.co/qmTXzJw/pexels-moose-photos-1586996.jpg",
-      "name": "Jane Smith",
-      "email": "janesmith@example.com",
-      "category": "instructor"
-    },
-    {
-      "_id": 3,
-      "image": "https://i.ibb.co/sbHNC8Y/pexels-buro-millennial-1438081.jpg",
-      "name": "Michael Johnson",
-      "email": "michaeljohnson@example.com",
-      "category": "instructor"
-    },
-    {
-      "_id": 4,
-      "image": "https://i.ibb.co/p1LYfgQ/pexels-george-milton-7034453.jpg",
-      "name": "Sarah Williams",
-      "email": "sarahwilliams@example.com",
-      "category": "instructor"
-    },
-    {
-      "_id": 5,
-      "image": "https://i.ibb.co/sy3WFtK/pexels-ketut-subiyanto-4474047.jpg",
-      "name": "David Lee",
-      "email": "davidlee@example.com",
-      "category": "instructor"
-    },
-    {
-      "_id": 6,
-      "image": "https://i.ibb.co/3Cdz5zx/pexels-andrea-piacquadio-3779760.jpg",
-      "name": "Emily Davis",
-      "email": "emilydavis@example.com",
-      "category": "instructor"
-    },
-    {
-      "_id": 7,
-      "image": "https://i.ibb.co/pbc5RGv/pexels-andrea-piacquadio-3807755.jpg",
-      "name": "Japanese",
-      "instructor_name": "John Doe",
-      "available_seat": 20,
-      "price": 99.99,
-      "category": "class"
-    },
-    {
-      "_id": 8,
-      "image": "https://i.ibb.co/q9P4N3q/pexels-artem-podrez-4492126.jpg",
-      "name": "Chinese",
-      "instructor_name": "Jane Smith",
-      "available_seat": 15,
-      "price": 79.99,
-      "category": "class"
-    },
-    {
-      "_id": 9,
-      "image": "https://i.ibb.co/stpMx1L/pexels-julia-m-cameron-4144222.jpg",
-      "name": "Italian",
-      "instructor_name": "Michael Johnson",
-      "available_seat": 10,
-      "price": 129.99,
-      "category": "class"
-    },
-    {
-      "_id": 10,
-      "image": "https://i.ibb.co/tc6tbbX/pexels-pixabay-267491.jpg",
-      "name": "French",
-      "instructor_name": "Sarah Williams",
-      "available_seat": 25,
-      "price": 89.99,
-      "category": "class"
-    },
-    {
-      "_id": 11,
-      "image": "https://i.ibb.co/L9shgp2/pexels-julia-m-cameron-4145153.jpg",
-      "name": "Spanish",
-      "instructor_name": "David Lee",
-      "available_seat": 12,
-      "price": 109.99,
-      "category": "class"
-    },
-    {
-      "_id": 12,
-      "image": "https://i.ibb.co/V3nVHgT/pexels-christina-morillo-1181233.jpg",
-      "name": "German",
-      "instructor_name": "Emily Davis",
-      "available_seat": 18,
-      "price": 94.99,
-      "category": "class"
-    }
+  {
+    "image": "https://i.ibb.co/gZd6spt/pexels-andrea-piacquadio-3756681.jpg",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/qmTXzJw/pexels-moose-photos-1586996.jpg",
+    "name": "Jane Smith",
+    "email": "janesmith@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/sbHNC8Y/pexels-buro-millennial-1438081.jpg",
+    "name": "Michael Johnson",
+    "email": "michaeljohnson@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/p1LYfgQ/pexels-george-milton-7034453.jpg",
+    "name": "Sarah Williams",
+    "email": "sarahwilliams@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/sy3WFtK/pexels-ketut-subiyanto-4474047.jpg",
+    "name": "David Lee",
+    "email": "davidlee@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/3Cdz5zx/pexels-andrea-piacquadio-3779760.jpg",
+    "name": "Emily Davis",
+    "email": "emilydavis@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/RvgQ3N3/pexels-karolina-grabowska-4491461.jpg",
+    "name": "Robert Wilson",
+    "email": "robertwilson@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/HqqRqWB/pexels-max-fischer-5212340.jpg",
+    "name": "Olivia Brown",
+    "email": "oliviabrown@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/DR0rBPM/pexels-christina-morillo-1181534.jpg",
+    "name": "Daniel Wilson",
+    "email": "danielwilson@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/8YzqSct/pexels-fauxels-3184647.jpg",
+    "name": "Sophia Thompson",
+    "email": "sophiathompson@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/j4xkLVn/pexels-mikhail-nilov-8923035.jpg",
+    "name": "Matthew Harris",
+    "email": "matthewharris@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/FbLfhZL/pexels-fauxels-3184328.jpg",
+    "name": "Lily Rodriguez",
+    "email": "lilyrodriguez@example.com",
+    "category": "instructor"
+  },
+  {
+    "image": "https://i.ibb.co/pbc5RGv/pexels-andrea-piacquadio-3807755.jpg",
+    "name": "Japanese",
+    "instructor_name": "John Doe",
+    "available_seat": 20,
+    "price": 99.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/q9P4N3q/pexels-artem-podrez-4492126.jpg",
+    "name": "Chinese",
+    "instructor_name": "Jane Smith",
+    "available_seat": 15,
+    "price": 79.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/stpMx1L/pexels-julia-m-cameron-4144222.jpg",
+    "name": "Italian",
+    "instructor_name": "Michael Johnson",
+    "available_seat": 10,
+    "price": 129.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/tc6tbbX/pexels-pixabay-267491.jpg",
+    "name": "French",
+    "instructor_name": "Sarah Williams",
+    "available_seat": 25,
+    "price": 89.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/L9shgp2/pexels-julia-m-cameron-4145153.jpg",
+    "name": "Spanish",
+    "instructor_name": "David Lee",
+    "available_seat": 12,
+    "price": 109.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/V3nVHgT/pexels-christina-morillo-1181233.jpg",
+    "name": "German",
+    "instructor_name": "Emily Davis",
+    "available_seat": 18,
+    "price": 94.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/GdhSrcD/pexels-rdne-stock-project-6517089.jpg",
+    "name": "Russian",
+    "instructor_name": "John Doe",
+    "available_seat": 15,
+    "price": 79.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/pdSz8v0/pexels-rdne-stock-project-6517243.jpg",
+    "name": "Arabic",
+    "instructor_name": "Jane Smith",
+    "available_seat": 20,
+    "price": 99.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/McDj0Ht/pexels-katerina-holmes-5905700.jpg",
+    "name": "Mandarin",
+    "instructor_name": "Michael Johnson",
+    "available_seat": 10,
+    "price": 129.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/FxdVSYh/pexels-tima-miroshnichenko-5303515.jpg",
+    "name": "Korean",
+    "instructor_name": "Sarah Williams",
+    "available_seat": 18,
+    "price": 94.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/946Rjn5/pexels-vlada-karpovich-4050315.jpg",
+    "name": "Greek",
+    "instructor_name": "David Lee",
+    "available_seat": 12,
+    "price": 109.99,
+    "category": "class"
+  },
+  {
+    "image": "https://i.ibb.co/sR9sd39/pexels-julia-m-cameron-4144144.jpg",
+    "name": "Thai",
+    "instructor_name": "Emily Davis",
+    "available_seat": 15,
+    "price": 79.99,
+    "category": "class"
+  }
   ]
   

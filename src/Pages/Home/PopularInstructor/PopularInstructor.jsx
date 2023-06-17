@@ -4,7 +4,7 @@ import InstructorItem from "../InstructorItems/InstructorItem";
 
 const PopularInstructor = () => {
     const [instructors, loading] = UseInstructor();
-    const popular = instructors.filter(item => item.category === 'instructor');
+    const popular = instructors.filter(item => item.category === 'instructor').slice(0, 6);
 
     if (loading) {
         return <div>Loading...</div>; // Display a loading state
