@@ -63,7 +63,7 @@
       "_id": 9,
       "image": "https://i.ibb.co/stpMx1L/pexels-julia-m-cameron-4144222.jpg",
       "name": "Italian",
-      "instructor_name": "Michael Ame",
+      "instructor_name": "Michael Johnson",
       "available_seat": 10,
       "price": 129.99,
       "category": "class"
@@ -72,7 +72,7 @@
       "_id": 10,
       "image": "https://i.ibb.co/tc6tbbX/pexels-pixabay-267491.jpg",
       "name": "French",
-      "instructor_name": "Sarah kav",
+      "instructor_name": "Sarah Williams",
       "available_seat": 25,
       "price": 89.99,
       "category": "class"
