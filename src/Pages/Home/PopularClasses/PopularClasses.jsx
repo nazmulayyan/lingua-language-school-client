@@ -17,7 +17,7 @@ const PopularClasses = () => {
     return (
         <div className="w-11/12 mx-auto mb-28">
             <div>
-                <SectionTitle heading={'Top Classes'} />
+                <SectionTitle heading={'popular Classes'} />
                 <SectionTitle subHeading={'Discover the best classes available'} />
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-20">
