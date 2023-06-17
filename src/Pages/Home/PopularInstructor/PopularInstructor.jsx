@@ -1,11 +1,14 @@
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
-import Instructor from "../../Instructor/Instructor";
 import UseInstructor from "../../../Hooks/UseInstructor";
+import InstructorItem from "../InstructorItems/InstructorItem";
 
 const PopularInstructor = () => {
-    
-    const [instructors] = UseInstructor();
-    const popular = instructors.filter(item => item.category ==='instructor')
+    const [instructors, loading] = UseInstructor();
+    const popular = instructors.filter(item => item.category === 'instructor');
+
+    if (loading) {
+        return <div>Loading...</div>; // Display a loading state
+    }
 
     return (
         <div className="w-11/12 mx-auto mb-28">
@@ -15,8 +18,7 @@ const PopularInstructor = () => {
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-20">
                 {popular.map(item => (
-                    <Instructor key={item._id} item={item} />
-                    
+                    <InstructorItem key={item._id} item={item} />
                 ))}
             </div>
         </div>
