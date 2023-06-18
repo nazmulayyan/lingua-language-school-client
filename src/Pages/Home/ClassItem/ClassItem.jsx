@@ -1,7 +1,40 @@
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ClassItem = ({ item }) => {
 
-    const { image, name, instructor_name, available_seat, price, } = item
+    const { image, name, instructor_name, available_seat, price, _id} = item;
+    const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const handleAddToClass = item =>{
+        console.log(item);
+        if(user && user.email){
+            const addedClass = {classId: _id, image, name, instructor_name, available_seat, price, email: user.email}
+            fetch('http://localhost:5000/addClass',{
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(addedClass)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.insertedId){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'added successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
+        }
+    }
     return (
         <div>
                 <div className="bg-gray-100 rounded-xl shadow-xl hover:shadow-none duration-200">
@@ -29,7 +62,7 @@ const ClassItem = ({ item }) => {
                         </div>
                         
                     </div>
-                    <button className="w-full btn rounded-none rounded-b-xl bg-cyan-500 hover:bg-cyan-300 text-xl font-semibold py-2">Enroll Now</button>
+                    <button onClick={handleAddToClass} className="w-full btn rounded-none rounded-b-xl bg-cyan-500 hover:bg-cyan-300 text-xl font-semibold py-2">Enroll Now</button>
                 </div>
             </div>
     );

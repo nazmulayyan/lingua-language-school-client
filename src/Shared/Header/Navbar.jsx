@@ -4,12 +4,16 @@ import { RxHamburgerMenu, RxCross2, } from "react-icons/rx";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import addItems from "../../Hooks/addItems";
 
 const Navbar = () => {
+
 
     const { user, logOut } = useContext(AuthContext);
     const [open, setOpen] = useState(false);
     const [showTooltip, setShowTooltip] = useState(false);
+
+    const [addClass] = addItems();
 
     const handleLogOut = () => {
         logOut()
@@ -61,6 +65,7 @@ const Navbar = () => {
                                             dashboard
                                         </ActiveLink>
                                         <div className="fixed top-1/2 left-0 rounded-r-sm bg-cyan-500 px-3 py-2 text-3xl font-bold text-black">
+                                            <div>+{addClass?.length || 0}</div>
                                             <RiShoppingCartLine />
                                         </div>
                                     </li>
