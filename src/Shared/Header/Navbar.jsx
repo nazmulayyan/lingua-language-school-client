@@ -61,11 +61,12 @@ const Navbar = () => {
                                 <>
 
                                     <li className="px-6 cursor-pointer font-semibold text-lg text-white">
+                                        
                                         <ActiveLink className="" to="/dashboard">
                                             dashboard
                                         </ActiveLink>
                                         <div className="fixed top-1/2 left-0 rounded-r-sm bg-cyan-500 px-3 py-2 text-3xl font-bold text-black">
-                                            <div>+{addClass?.length || 0}</div>
+                                            <span className="text-base">+{addClass?.length || 0}</span>
                                             <RiShoppingCartLine />
                                         </div>
                                     </li>

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import addItems from "../../../Hooks/addItems";
 
 const ClassItem = ({ item }) => {
 
@@ -9,6 +10,7 @@ const ClassItem = ({ item }) => {
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    const [, refetch] = addItems()
 
     const handleAddToClass = item =>{
         console.log(item);
@@ -24,6 +26,7 @@ const ClassItem = ({ item }) => {
             .then(res => res.json())
             .then(data => {
                 if(data.insertedId){
+                    refetch();
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
