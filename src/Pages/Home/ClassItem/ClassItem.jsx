@@ -16,7 +16,7 @@ const ClassItem = ({ item }) => {
         console.log(item);
         if(user && user.email){
             const addedClass = {classId: _id, image, name, instructor_name, available_seat, price, email: user.email}
-            fetch('http://localhost:5000/addClass',{
+            fetch('https://lingua-language-school-server.vercel.app/addClass',{
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
